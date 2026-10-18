@@ -37,6 +37,15 @@ export const skills: Skill[] = [
     description: "Type-safe frontend application development",
     initials: "TS",
   },
+  
+{
+  name: "AngularJS",
+  category: "Frontend",
+  description:
+    "Rapidly adopted a new frontend framework to deliver healthcare lab result management workflows.",
+  initials: "A",
+},
+
   {
     name: "Redux Toolkit",
     category: "Frontend",

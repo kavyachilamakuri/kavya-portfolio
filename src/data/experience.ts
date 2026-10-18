@@ -19,23 +19,41 @@ export const experiences: Experience[] = [
     period: "Oct 2024 – Present",
     location: "Hyderabad, India",
     current: true,
-    summary:
-      "Leading scalable healthcare platform engineering, architecture decisions, and cross-functional delivery.",
-    achievements: [
-      "Brought Qualtrics implementation in-house, reducing third-party contract spend by approximately 50%.",
-      "Integrated GPT-4o with .NET microservices through asynchronous pipelines for AI-powered dietary recommendations.",
-      "Reduced frontend bundle size by 12% through dependency and performance optimization.",
-      "Mentored 5+ engineers and introduced code review checklists, contributing to 15% improvement in team velocity.",
-      "Designed secure external review workflows with controlled guest access and authorization.",
-    ],
-    technologies: [
-      "React",
-      "TypeScript",
-      ".NET",
-      "Azure",
-      "Microservices",
-      "GPT-4o",
-    ],
+ 
+summary:
+  "Leading healthcare platform engineering, cross-functional delivery, and full-stack architecture across React, AngularJS, .NET, and Azure.",
+
+achievements: [
+  "Led end-to-end delivery of the Lab Result Management feature, coordinating with stakeholders across teams and completing delivery in 5 months against a 6-month plan.",
+
+  "Learned and adopted AngularJS after promotion, successfully delivering production features in a new technology stack.",
+
+  "Delivered lab result workflow automation that saves approximately 5 hours per nurse per day, improving operational efficiency.",
+
+  "Received stakeholder accolades for the successful delivery of Lab Result Management.",
+
+  "Brought Qualtrics capabilities in-house, reducing third-party contract spend by approximately 50%.",
+
+  "Integrated GPT-4o with .NET microservices through asynchronous pipelines for AI-powered dietary recommendations.",
+
+  "Reduced frontend bundle size by 12% through dependency and performance optimization.",
+
+  "Mentored 5+ engineers and introduced structured code review practices, contributing to a 15% improvement in team velocity.",
+
+  "Designed secure external review workflows with controlled guest access and authorization.",
+],
+
+technologies: [
+  "React",
+  "TypeScript",
+  "AngularJS",
+  ".NET",
+  "Azure",
+  "SQL Server",
+  "Microservices",
+  "GPT-4o",
+],
+
   },
   {
     id: "providence-senior",

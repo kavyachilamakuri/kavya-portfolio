@@ -9,6 +9,7 @@ import Skills from "./sections/Skills";
 import Contact from "./sections/Contact";
 import Footer from "./components/Footer";
 import Experience from "./sections/Experience";
+import Impact from "./sections/Impact";
 
 function App() {
   return (
@@ -125,6 +126,7 @@ function App() {
       <About />
       <Skills />
       <Experience />
+      <Impact />
       <Contact />
     </main>
     <Footer />
