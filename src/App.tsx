@@ -5,6 +5,9 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Navbar from "./components/Navbar";
 import About from "./sections/About";
 import Typewriter from "./components/Typewriter";
+import Skills from "./sections/Skills";
+import Contact from "./sections/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -119,7 +122,10 @@ function App() {
         </motion.a>
       </section>
       <About />
+      <Skills />
+      <Contact />
     </main>
+    <Footer />
     </>
   );
 }
