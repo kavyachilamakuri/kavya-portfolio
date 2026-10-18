@@ -2,11 +2,14 @@
 import { motion } from "motion/react";
 import { ArrowDown } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
+    <>
+    <Navbar />
     <main className="min-h-screen bg-[#0B1020] text-white">
-      <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 text-center">
+      <section id="home" className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 text-center">
 
         {/* Background glow */}
         <div className="pointer-events-none absolute -top-40 right-0 h-96 w-96 rounded-full bg-indigo-600/20 blur-3xl" />
@@ -70,7 +73,7 @@ function App() {
             </a>
 
             <a
-              href="https://www.linkedin.com/in/YOUR_PROFILE"
+              href="https://www.linkedin.com/in/kavya-chilamakuri/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn profile"
@@ -97,6 +100,7 @@ function App() {
         </motion.a>
       </section>
     </main>
+    </>
   );
 }
 
