@@ -48,10 +48,12 @@ export default function ProjectCard({
           )}
         </div>
 
-        <h3 className="text-2xl font-bold text-white transition-colors group-hover:text-indigo-300">
+        {/* <h3 className="text-2xl font-bold text-white transition-colors group-hover:text-indigo-300">
           {project.title}
-        </h3>
-
+        </h3> */}
+         <h3 className="break-words text-xl font-bold text-white transition-colors group-hover:text-indigo-300 sm:text-2xl">
+  {project.title}
+</h3>
         <p className="mt-4 flex-1 text-sm leading-7 text-slate-400">
           {project.summary}
         </p>

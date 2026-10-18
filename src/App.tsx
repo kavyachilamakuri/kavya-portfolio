@@ -11,11 +11,20 @@ import Footer from "./components/Footer";
 import Experience from "./sections/Experience";
 import Impact from "./sections/Impact";
 import Projects from "./sections/Projects";
+import BackToTop from "./components/BackToTop";
+
+
 function App() {
   return (
     <>
+    <a
+  href="#main-content"
+  className="fixed left-4 top-4 z-[100] -translate-y-24 rounded-lg bg-indigo-500 px-4 py-3 font-semibold text-white shadow-xl transition-transform focus:translate-y-0"
+>
+  Skip to main content
+</a>
     <Navbar />
-    <main className="min-h-screen bg-[#0B1020] text-white">
+    <main className="min-h-screen bg-[#0B1020] text-white" id="main-content">
       <section id="home" className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 text-center">
 
         {/* Background glow */}
@@ -131,6 +140,7 @@ function App() {
       <Contact />
     </main>
     <Footer />
+    <BackToTop />
     </>
   );
 }

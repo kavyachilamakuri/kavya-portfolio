@@ -1,0 +1,5 @@
+
+User-agent: *
+Allow: /
+
+Sitemap: https://kavyachilamakuri.github.io/kavya-portfolio/sitemap.xml

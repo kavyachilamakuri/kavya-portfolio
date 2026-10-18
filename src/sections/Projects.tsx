@@ -57,7 +57,7 @@ export default function Projects() {
             05 / FEATURED WORK
           </p>
 
-          <h2 className="max-w-4xl text-4xl font-bold tracking-tight text-white md:text-5xl">
+          <h2 className="max-w-4xl text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
             Engineering solutions with{" "}
             <span className="text-indigo-400">
               real impact.
@@ -103,7 +103,7 @@ export default function Projects() {
         {/* Animated project grid */}
         <motion.div
           layout={!reduceMotion}
-          className="mt-10 grid items-start gap-6 lg:grid-cols-2"
+          className="mt-10 grid min-w-0 grid-cols-1 items-start gap-6 md:grid-cols-2"
         >
           <AnimatePresence mode="popLayout">
             {filteredProjects.map((project, index) => (
