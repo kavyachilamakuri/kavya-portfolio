@@ -10,7 +10,7 @@ import Contact from "./sections/Contact";
 import Footer from "./components/Footer";
 import Experience from "./sections/Experience";
 import Impact from "./sections/Impact";
-
+import Projects from "./sections/Projects";
 function App() {
   return (
     <>
@@ -127,6 +127,7 @@ function App() {
       <Skills />
       <Experience />
       <Impact />
+      <Projects />
       <Contact />
     </main>
     <Footer />

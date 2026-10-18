@@ -7,12 +7,15 @@ import {
 } from "motion/react";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 
+
 const navLinks = [
   { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
   { name: "Skills", href: "#skills" },
   { name: "Experience", href: "#experience" },
+  { name: "Projects", href: "#projects" },
 ];
+
 
 const allLinks = [
   ...navLinks,
