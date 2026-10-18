@@ -1,122 +1,103 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+
+import { motion } from "motion/react";
+import { ArrowDown } from "lucide-react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
+    <main className="min-h-screen bg-[#0B1020] text-white">
+      <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 text-center">
+
+        {/* Background glow */}
+        <div className="pointer-events-none absolute -top-40 right-0 h-96 w-96 rounded-full bg-indigo-600/20 blur-3xl" />
+
+        {/* Animated hero content */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="relative z-10 max-w-4xl"
         >
-          Count is {count}
-        </button>
+          <p className="mb-5 text-sm font-medium tracking-widest text-emerald-400">
+            HELLO, I'M
+          </p>
+
+          <h1 className="text-5xl font-bold tracking-tight md:text-7xl">
+            Sri Kavya
+            <span className="block text-indigo-400">
+              Chilamakuri
+            </span>
+          </h1>
+
+          <h2 className="mt-6 text-xl text-slate-300 md:text-3xl">
+            Lead Software Engineer
+          </h2>
+
+          <p className="mx-auto mt-6 max-w-2xl text-slate-400">
+            Building scalable web applications, cloud-native
+            services, and event-driven systems using React,
+            TypeScript, .NET, and Microsoft Azure.
+          </p>
+
+          {/* Action buttons */}
+          <div className="mt-10 flex flex-wrap justify-center gap-4">
+            <a
+              href="#projects"
+              className="rounded-lg bg-indigo-500 px-6 py-3 font-medium transition duration-300 hover:-translate-y-1 hover:bg-indigo-400"
+            >
+              Explore My Work
+            </a>
+
+            <a
+              href={`${import.meta.env.BASE_URL}resume.pdf`}
+              download
+              className="rounded-lg border border-slate-600 px-6 py-3 font-medium transition duration-300 hover:-translate-y-1 hover:border-indigo-400"
+            >
+              Download Resume
+            </a>
+          </div>
+
+          {/* Social links */}
+          <div className="mt-10 flex justify-center gap-6">
+            <a
+              href="https://github.com/kavyachilamakuri"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub profile"
+              className="text-slate-400 transition duration-300 hover:-translate-y-1 hover:text-indigo-400"
+            >
+              <FaGithub size={26} />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/YOUR_PROFILE"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn profile"
+              className="text-slate-400 transition duration-300 hover:-translate-y-1 hover:text-indigo-400"
+            >
+              <FaLinkedin size={26} />
+            </a>
+          </div>
+        </motion.div>
+
+        {/* Animated scroll indicator */}
+        <motion.a
+          href="#about"
+          aria-label="Scroll to About"
+          animate={{ y: [0, 10, 0] }}
+          transition={{
+            repeat: Infinity,
+            duration: 2,
+            ease: "easeInOut",
+          }}
+          className="absolute bottom-10 text-slate-400 hover:text-indigo-400"
+        >
+          <ArrowDown size={24} />
+        </motion.a>
       </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+    </main>
+  );
 }
 
-export default App
+export default App;
