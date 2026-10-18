@@ -1,14 +1,37 @@
 
+import { useState } from "react";
 import {
   motion,
+  AnimatePresence,
   useReducedMotion,
 } from "motion/react";
 
 import ProjectCard from "../components/ProjectCard";
-import { projects } from "../data/projects";
+import {
+  projects,
+  type ProjectCategory,
+} from "../data/projects";
+
+type Filter = "All" | ProjectCategory;
+
+const filters: Filter[] = [
+  "All",
+  "Healthcare",
+  "Frontend",
+  "AI",
+];
 
 export default function Projects() {
+  const [activeFilter, setActiveFilter] =
+    useState<Filter>("All");
+
   const reduceMotion = useReducedMotion();
+
+  const filteredProjects = projects.filter(
+    (project) =>
+      activeFilter === "All" ||
+      project.filterCategory === activeFilter
+  );
 
   return (
     <section
@@ -19,6 +42,7 @@ export default function Projects() {
       <div className="pointer-events-none absolute right-0 top-1/4 h-96 w-96 rounded-full bg-indigo-500/10 blur-3xl" />
 
       <div className="relative mx-auto max-w-6xl">
+        {/* Heading */}
         <motion.div
           initial={
             reduceMotion
@@ -41,24 +65,82 @@ export default function Projects() {
           </h2>
 
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-400">
-            A selection of engineering initiatives spanning
+            Selected engineering initiatives spanning
             healthcare automation, frontend architecture,
             platform modernization, and generative AI.
           </p>
         </motion.div>
 
-        <div className="mt-14 grid items-start gap-6 lg:grid-cols-2">
-          {projects.map((project, index) => (
-            <ProjectCard
-              key={project.id}
-              project={project}
-              index={index}
-            />
-          ))}
+        {/* Category filters */}
+        <div
+          role="group"
+          aria-label="Filter projects"
+          className="mt-10 flex flex-wrap gap-3"
+        >
+          {filters.map((filter) => {
+            const isActive = activeFilter === filter;
+
+            return (
+              <button
+                key={filter}
+                type="button"
+                onClick={() => setActiveFilter(filter)}
+                aria-pressed={isActive}
+                className={`rounded-full border px-5 py-2.5 text-sm font-medium transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400 ${
+                  isActive
+                    ? "border-indigo-400 bg-indigo-500 text-white shadow-[0_0_20px_rgba(99,102,241,0.25)]"
+                    : "border-white/10 bg-white/5 text-slate-400 hover:border-indigo-400/40 hover:text-white"
+                }`}
+              >
+                {filter === "All"
+                  ? "All Projects"
+                  : filter}
+              </button>
+            );
+          })}
         </div>
 
+        {/* Animated project grid */}
+        <motion.div
+          layout={!reduceMotion}
+          className="mt-10 grid items-start gap-6 lg:grid-cols-2"
+        >
+          <AnimatePresence mode="popLayout">
+            {filteredProjects.map((project, index) => (
+              <motion.div
+                key={project.id}
+                layout={!reduceMotion}
+                initial={
+                  reduceMotion
+                    ? false
+                    : { opacity: 0, scale: 0.95, y: 15 }
+                }
+                animate={{
+                  opacity: 1,
+                  scale: 1,
+                  y: 0,
+                }}
+                exit={
+                  reduceMotion
+                    ? { opacity: 0 }
+                    : { opacity: 0, scale: 0.95, y: -10 }
+                }
+                transition={{
+                  duration: reduceMotion ? 0 : 0.3,
+                }}
+                className="min-w-0"
+              >
+                <ProjectCard
+                  project={project}
+                  index={index}
+                />
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </motion.div>
+
         <p className="mt-10 text-center text-xs leading-6 text-slate-500">
-          Selected professional work is summarized at a high level
+          Professional work is summarized at a high level
           to respect employer confidentiality.
         </p>
       </div>

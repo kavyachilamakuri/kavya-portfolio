@@ -15,6 +15,7 @@ import {
 
 import GlowCard from "./GlowCard";
 import type { Project } from "../data/projects";
+import ProjectVisual from "./ProjectVisual";
 
 interface ProjectCardProps {
   project: Project;
@@ -34,6 +35,7 @@ export default function ProjectCard({
       className="h-full"
     >
       <article className="flex h-full flex-col">
+        <ProjectVisual project={project} />
         <div className="mb-5 flex items-center justify-between gap-3">
           <span className="rounded-full border border-indigo-400/20 bg-indigo-500/10 px-3 py-1.5 text-xs font-medium text-indigo-300">
             {project.category}
