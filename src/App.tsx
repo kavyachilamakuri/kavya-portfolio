@@ -8,6 +8,7 @@ import Typewriter from "./components/Typewriter";
 import Skills from "./sections/Skills";
 import Contact from "./sections/Contact";
 import Footer from "./components/Footer";
+import Experience from "./sections/Experience";
 
 function App() {
   return (
@@ -123,6 +124,7 @@ function App() {
       </section>
       <About />
       <Skills />
+      <Experience />
       <Contact />
     </main>
     <Footer />
