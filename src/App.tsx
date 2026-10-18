@@ -3,6 +3,8 @@ import { motion } from "motion/react";
 import { ArrowDown } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Navbar from "./components/Navbar";
+import About from "./sections/About";
+import Typewriter from "./components/Typewriter";
 
 function App() {
   return (
@@ -25,12 +27,29 @@ function App() {
             HELLO, I'M
           </p>
 
-          <h1 className="text-5xl font-bold tracking-tight md:text-7xl">
+          {/* <h1 className="text-5xl font-bold tracking-tight md:text-7xl">
             Sri Kavya
             <span className="block text-indigo-400">
               Chilamakuri
             </span>
-          </h1>
+          </h1> */}
+          
+         <h1 className="text-5xl font-bold tracking-tight md:text-7xl">
+          <Typewriter
+           text="Sri Kavya"
+           delay={0.3}
+           speed={0.09}
+          />
+
+           <span className="block text-indigo-400">
+            <Typewriter
+             text="Chilamakuri"
+             delay={1.2}
+             speed={0.09}
+            />
+         </span>
+        </h1>
+
 
           <h2 className="mt-6 text-xl text-slate-300 md:text-3xl">
             Lead Software Engineer
@@ -99,6 +118,7 @@ function App() {
           <ArrowDown size={24} />
         </motion.a>
       </section>
+      <About />
     </main>
     </>
   );
