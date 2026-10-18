@@ -1,6 +1,6 @@
 
 import { motion, useReducedMotion } from "motion/react";
-import { ArrowUpRight, Code2, Cloud, Users,Database,GitBranch,Gauge } from "lucide-react";
+import {  Code2, Cloud, Users,Database,GitBranch,Gauge } from "lucide-react";
 import GlowCard from "../components/GlowCard";
 
 // const highlights = [
