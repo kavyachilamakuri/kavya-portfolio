@@ -1,3 +1,4 @@
+
 export type ProjectCategory = "Healthcare" | "Frontend" | "AI";
 
 export interface Project {
@@ -16,7 +17,6 @@ export interface Project {
   liveUrl?: string;
 }
 
-
 export const projects: Project[] = [
   {
     id: "lab-results",
@@ -24,18 +24,18 @@ export const projects: Project[] = [
     category: "Healthcare Automation",
     filterCategory: "Healthcare",
     summary:
-      "Led the delivery of a clinical lab result management solution that streamlined nursing workflows and reduced manual effort.",
+      "Delivered a clinical lab result management solution one month ahead of schedule, reducing manual nursing effort and improving clinical workflows.",
     challenge:
-      "Clinical lab result workflows involved time-consuming manual activities, creating opportunities to improve nursing efficiency and operational productivity.",
+      "Manual lab result processing consumed valuable nursing time. The solution needed to simplify clinical workflows while meeting delivery commitments and stakeholder expectations.",
     solution:
-      "Owned end-to-end feature delivery, rapidly adopted modern Angular after promotion, and coordinated cross-functional stakeholders to deliver ahead of schedule.",
+      "Took ownership of feature delivery, rapidly learned modern Angular, and worked closely with engineering and business stakeholders to deliver the solution in five months against a six-month plan.",
     contributions: [
-      "Led feature delivery from planning through production release.",
-      "Completed delivery in 5 months against a planned 6-month timeline.",
-      "Rapidly upskilled in modern Angular and delivered production functionality.",
-      "Coordinated business stakeholders and engineering teams throughout delivery.",
-      "Delivered lab result automation that saves approximately 5 hours per nurse per day.",
-      "Received stakeholder accolades for successful delivery.",
+      "Owned feature delivery from requirements and implementation through release.",
+      "Learned and applied modern Angular to build production healthcare workflows.",
+      "Coordinated with engineering teams and business stakeholders to resolve delivery dependencies.",
+      "Delivered the solution in five months against a planned six-month timeline.",
+      "Implemented workflow improvements that reduced manual nursing effort.",
+      "Earned stakeholder recognition for successful delivery.",
     ],
     technologies: [
       "Angular",
@@ -43,7 +43,7 @@ export const projects: Project[] = [
       ".NET",
       "SQL Server",
     ],
-    impact: "5 hours saved per nurse per day",
+    impact: "Delivered 1 month ahead of schedule",
     featured: true,
   },
   {
@@ -52,24 +52,25 @@ export const projects: Project[] = [
     category: "Frontend & Platform",
     filterCategory: "Frontend",
     summary:
-      "Enhanced a healthcare knowledge platform through React-based modernization, reusable UI architecture, and performance improvements.",
+      "Built and improved complex React-based healthcare workflows, including document review, search, rich-text editing, and reusable UI components.",
     challenge:
-      "An evolving healthcare platform required consistent user experiences, maintainable frontend components, efficient performance, and secure collaboration workflows.",
+      "A growing healthcare knowledge platform required maintainable frontend architecture, sophisticated document workflows, consistent user experiences, and reliable performance.",
     solution:
-      "Delivered frontend enhancements, application-wide UI improvements, performance optimizations, and external review capabilities.",
+      "Developed reusable React and TypeScript components, implemented specialized editing and review capabilities, and optimized frontend performance across the platform.",
     contributions: [
-      "Built reusable React and TypeScript components for complex healthcare workflows.",
-      "Contributed to UI redesign and application-wide theming.",
-      "Delivered external review workflows with controlled guest access.",
-      "Optimized frontend dependencies and reduced bundle size by 12%.",
-      "Improved engineering quality through testing and deployment practices.",
-      "Mentored engineers and supported cross-functional delivery.",
+      "Developed reusable React and TypeScript components for complex healthcare workflows.",
+      "Built an in-house CKEditor 5 Find & Replace extension supporting advanced text matching and replacement.",
+      "Implemented external document review workflows with controlled guest access and commenting permissions.",
+      "Enhanced search experiences and interactive document management interfaces.",
+      "Reduced frontend bundle size by approximately 12% through dependency and build optimization.",
+      "Contributed to code reviews, automated testing, and mentoring engineers.",
     ],
     technologies: [
       "React",
       "TypeScript",
-      "Redux",
+      "Redux Toolkit",
       "Material UI",
+      "CKEditor 5",
       "Azure",
     ],
     impact: "12% frontend bundle reduction",
@@ -81,25 +82,26 @@ export const projects: Project[] = [
     category: "AI & Backend Engineering",
     filterCategory: "AI",
     summary:
-      "Developed a generative AI prototype combining GPT-4o and .NET microservices to generate context-aware nutrition recommendations.",
+      "Developed a healthcare AI prototype integrating GPT-4o with .NET microservices to generate context-aware dietary recommendations.",
     challenge:
-      "Explore how large language models could support personalized dietary guidance through a scalable backend integration.",
+      "Explore how generative AI could use relevant healthcare context to provide more personalized dietary guidance through a backend integration.",
     solution:
-      "Designed and implemented an AI-powered prototype integrating GPT-4o with .NET services and asynchronous processing workflows.",
+      "Integrated GPT-4o with .NET microservices and asynchronous request-processing workflows to demonstrate context-aware nutrition recommendations.",
     contributions: [
-      "Integrated GPT-4o into a .NET-based application.",
-      "Implemented asynchronous processing for AI requests.",
-      "Developed backend orchestration for generating dietary recommendations.",
-      "Explored practical applications of generative AI in healthcare.",
-      "Presented the solution as part of a healthcare innovation initiative.",
+      "Integrated GPT-4o with C# and .NET backend services.",
+      "Implemented asynchronous processing for AI requests and responses.",
+      "Developed service orchestration for generating dietary recommendations.",
+      "Explored the use of healthcare record context in personalized nutrition guidance.",
+      "Contributed to a healthcare innovation prototype recognized at Hack4Health 2024.",
     ],
     technologies: [
       "GPT-4o",
       "C#",
       "ASP.NET Core",
       "Microservices",
+      "Async/Await",
     ],
-    impact: "AI-powered nutrition recommendations",
+    impact: "Hack4Health 2024 Runner-Up",
     featured: true,
   },
   {
@@ -108,26 +110,25 @@ export const projects: Project[] = [
     category: "Frontend Architecture",
     filterCategory: "Frontend",
     summary:
-      "Contributed to modernizing a React monolith into modular microfrontend applications using Single-SPA.",
+      "Contributed to modernizing a React monolith into modular microfrontends using Single-SPA and automated deployment pipelines.",
     challenge:
-      "A growing frontend monolith increased application complexity and made independent development and deployment more difficult.",
+      "A growing monolithic frontend increased maintenance complexity and made independently evolving application features more difficult.",
     solution:
-      "Contributed to decomposing the application into Single-SPA microfrontends and automating frontend deployment workflows using Azure DevOps.",
+      "Helped introduce Single-SPA microfrontend boundaries and supported deployment automation using Azure DevOps pipelines.",
     contributions: [
-      "Contributed to migrating a React monolith to Single-SPA microfrontends.",
-      "Supported modular frontend architecture and application boundaries.",
-      "Implemented deployment automation using Azure Pipelines.",
-      "Improved frontend maintainability and release workflows.",
-      "Supported code quality and engineering best practices.",
+      "Contributed to migrating a React monolith toward a Single-SPA microfrontend architecture.",
+      "Supported modular application boundaries and reusable frontend patterns.",
+      "Worked on frontend integration and application maintainability.",
+      "Implemented deployment workflows using Azure DevOps pipelines.",
+      "Supported code quality and engineering delivery practices.",
     ],
     technologies: [
       "React",
-      "Single-SPA",
       "TypeScript",
+      "Single-SPA",
       "Azure DevOps",
     ],
     impact: "Modular frontend architecture",
     featured: false,
   },
 ];
-

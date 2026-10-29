@@ -9,26 +9,24 @@ export interface ImpactMetric {
 }
 
 export const impactMetrics: ImpactMetric[] = [
-    
-{
-  id: "lab-automation",
-  value: 5,
-  suffix: "h",
-  label: "Nursing Time Saved Daily",
-  description:
-    "Automated lab result workflows, saving approximately 5 hours per nurse per day.",
-  category: "Healthcare Automation",
-},
-{
-  id: "early-delivery",
-  value: 1,
-  suffix: " month",
-  label: "Ahead of Schedule",
-  description:
-    "Delivered the Lab Result Management feature in 5 months against a planned 6-month timeline.",
-  category: "Delivery Excellence",
-},
-
+  {
+    id: "lab-automation",
+    value: 5,
+    suffix: "h",
+    label: "Nursing Time Saved Daily",
+    description:
+      "Automated lab result workflows, saving approximately 5 hours of nursing effort per working day.",
+    category: "Healthcare Automation",
+  },
+  {
+    id: "early-delivery",
+    value: 1,
+    suffix: " month",
+    label: "Ahead of Schedule",
+    description:
+      "Delivered the Lab Result Management feature in 5 months against a planned 6-month timeline.",
+    category: "Delivery Excellence",
+  },
   {
     id: "cost",
     value: 50,
@@ -85,12 +83,11 @@ export const impactMetrics: ImpactMetric[] = [
   },
 ];
 
-
 export const recognitions = [
   {
     title: "BRAVO Award — 2× Recipient",
     description:
-      "Received the BRAVO Award twice within three years in recognition of engineering contributions and delivery excellence.",
+      "Recognized with BRAVO Awards in 2025 and 2026 for engineering contributions and delivery excellence.",
   },
   {
     title: "Lab Result Management — Delivery Recognition",
@@ -98,9 +95,13 @@ export const recognitions = [
       "Received stakeholder accolades for coordinating and successfully delivering Lab Result Management one month ahead of schedule.",
   },
   {
-    title: "Hack4Health Runner-Up",
+    title: "Hack4Health 2024 — Runner-Up",
     description:
-      "Recognized for innovation in healthcare-focused engineering.",
+      "Recognized for developing an AI-powered nutrition assistant using GPT-4o.",
+  },
+  {
+    title: "Employee of the Quarter — ValueLabs",
+    description:
+      "Recognized for engineering contributions in August 2021.",
   },
 ];
-

@@ -70,9 +70,7 @@ function App() {
           </h2>
 
           <p className="mx-auto mt-6 max-w-2xl text-slate-400">
-            Building scalable web applications, cloud-native
-            services, and event-driven systems using React,
-            TypeScript, .NET, and Microsoft Azure.
+            Turning complex challenges into scalable, impactful solutions through hands-on engineering, adaptability, and technical leadership.
           </p>
 
           {/* Action buttons */}
