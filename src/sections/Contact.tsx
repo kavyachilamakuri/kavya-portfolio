@@ -20,7 +20,7 @@ const contactLinks = [
   {
     label: "LinkedIn",
     value: "Connect professionally",
-    href: "https://www.linkedin.com/in/kavya-chilamakuri",
+    href: "https://www.linkedin.com/in/kavyachilamakuri",
     icon: FaLinkedin,
   },
 ];

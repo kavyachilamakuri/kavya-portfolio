@@ -106,7 +106,7 @@ function App() {
             </a>
 
             <a
-              href="https://www.linkedin.com/in/kavya-chilamakuri/"
+              href="https://www.linkedin.com/in/kavyachilamakuri/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn profile"
